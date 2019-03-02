@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <span>ADAL App &nbsp; &nbsp; </span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+
+  <span *ngIf="!authenticated" (click)="login()">
+    <button mat-raised-button>Login</button>
+  </span>
+  <span *ngIf="authenticated"> welcome {{username}} &nbsp;
+    <button mat-raised-button (click)="logout()">Logout</button>
+  </span>
+</mat-toolbar>
